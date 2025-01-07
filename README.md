@@ -1,6 +1,8 @@
 # Welcome to Carrot Keiku!
 
-Link to the repository: https://github.com/dangkei4/bandWiki 
+Link to the GitHub repository: https://github.com/dangkei4/bandWiki 
+
+Link to our official 킹무위키: https://dangkei4.github.io/bandWiki/
 
 Link to our Youtube Channel: https://www.youtube.com/@Carrot_Cake_Band
 
