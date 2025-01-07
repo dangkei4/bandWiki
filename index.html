@@ -12,11 +12,13 @@
             padding: 0;
             background-color: #f8f9fa;
             color: #333;
+            transition: background-color 0.3s, color 0.3s;
         }
         header {
             background-color: #2a4b7c;
             color: white;
             padding: 1rem 2rem;
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -54,6 +56,7 @@
             border-collapse: collapse;
             margin-bottom: 2rem;
             background: white;
+            transition: background-color 0.3s, color 0.3s;
         }
         table, th, td {
             border: 1px solid #ddd;
@@ -64,6 +67,45 @@
         }
         th {
             background-color: #f2f2f2;
+        }
+        th, td {
+            color: #333;
+        }
+        .dark-theme {
+            background-color: #343a40;
+            color: white;
+        }
+        .dark-theme table {
+            background-color: #495057;
+        }
+        .dark-theme th {
+            background-color: #6c757d;
+        }
+        .dark-theme td {
+            color: #f8f9fa;
+        }
+        .dark-theme a {
+            color: #a8c6e6;
+        }
+        .dark-theme header {
+            background-color: #212529;
+        }
+        .dark-theme footer {
+            background-color: #212529;
+        }
+        .toggle-button {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            background-color: #2a4b7c;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .toggle-button:hover {
+            background-color: #1d3e5d;
         }
         img {
             display: block;
@@ -82,6 +124,7 @@
 <body>
     <header>
         <h1>밴드위키</h1>
+        <button class="toggle-button" onclick="toggleTheme()">Dark Mode</button>
     </header>
     <main>
         <img src="https://cdn.pixabay.com/photo/2016/06/22/17/44/easter-1473615_1280.jpg" alt="밴드 이미지">
@@ -117,7 +160,7 @@
                 </ol>
                 <li><a href="#covers">2.0 커버한 곡들</a></li>
                 <li><a href="#misc">3.0 여담</a></li>
-                <li><a href="#controversy">4.0 논란</a></li>          
+                <li><a href="#controversy">4.0 논란</a>          
                 <li><a href="#references">5.0 출처</a></li>
             </ol>
         </section>
@@ -200,7 +243,7 @@
         <section id="misc">
             <h2>3.0 여담</h2>
             <ul>
-                <li>사장님의 롤 최고 티어는 마스터이다. 현재는 다이아몬드라고 한다 [1].</li>
+                <li>사장님의 롤 최고 티어는 마스터이다. 현재는 다이아몬드라고 한다 <a href="#ref1">[1]</a>.</li>
                 <li>제이크는 밴드 내의 모든 악기들을 수준급으로 다룰 줄 안다. 기타, 베이스, 피아노, 드럼 전부 가능.</li>
                 <li>몇몇 멤버들은 주기적으로 배드민턴을 치러 간다.</li>
                 <li>한명의 멤버(영지)를 제외하고는 전원 내향형(i)이다.</li>
@@ -212,22 +255,32 @@
                 <li>수훈은 밴드 내의 유일한 기혼자이다. 자녀 계획은 없다고 한다. 결혼을 상당히 빨리 한 경우인데 26세에 했다고 한다.</li>
                 <li>제니와 준성은 밴쿠버 출신이다. 각각 Burnaby, Surrey 출신.</li>
                 <li>진주는 한국으로 돌아가서 경제학을 공부할 예정이라고 한다.</li>
-            </ul>
-        </section>
+            </ul>        </section>
         <section id="controversy">
             <h2>4.0 논란</h2>
-                <h3>영지 탈주 사건</h3>
-                <p>2024년 12월 무렵 영지는 갑작스레 밴드 탈퇴를 선언한다. 근래 들어서 개인적으로 불운한 사건들이 많이 터져서 복합적인 상황 때문에 현타가 왔다고 한다. 그 발언 이후 도영은 새로운 여자 보컬을 구인하기로 결심하고 오디션을 열기로 한다. 돌아오는 합주날에 새로운 여자 보컬이 참관 및 오디션을 진행하면서 영지의 탈퇴는 기정사실화 된다. 하지만 그날 합주를 다 마친 후 영지는 자신의 혼란스러운 상황을 설명하며 멤버들에게 거듭 사죄를 한다. 그리고 탈퇴를 번복하고 다시 함께 할 것을 맹세한다. 도영은 사장님으로서 앞으로 그런 일이 있으면 미리 말해줄 것을 당부한다. 오디션을 본 보컬은 도영이 따로 연락을 취했을거라 추정.</p>
+            <h3>영지 탈주 사건</h3>
+            <p>2024년 12월 무렵 영지는 갑작스레 밴드 탈퇴를 선언한다. 근래 들어서 개인적으로 불운한 사건들이 많이 터져서 복합적인 상황 때문에 현타가 왔다고 한다. 그 발언 이후 도영은 새로운 여자 보컬을 구인하기로 결심하고 오디션을 열기로 한다. 돌아오는 합주날에 새로운 여자 보컬이 참관 및 오디션을 진행하면서 영지의 탈퇴는 기정사실화 된다. 하지만 그날 합주를 다 마친 후 영지는 자신의 혼란스러운 상황을 설명하며 멤버들에게 거듭 사죄를 한다. 그리고 탈퇴를 번복하고 다시 함께 할 것을 맹세한다. 도영은 사장님으로서 앞으로 그런 일이 있으면 미리 말해줄 것을 당부한다. 오디션을 본 보컬은 도영이 따로 연락을 취했을거라 추정.</p>
         </section>
         <section id="references">
             <h2>5.0 출처</h2>
             <ul>
-                <li>[1]본인피셜</li>
+                <li><section id="ref1">[1]본인피셜</section></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 밴드위키 | <a href="#">문의하기</a> | <a href="#">정보</a></p>
+        <p>&copy; 2024 밴드위키 | <a href="#intro">탑으로</a></p>
     </footer>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const button = document.querySelector('.toggle-button');
+            if (document.body.classList.contains('dark-theme')) {
+                button.textContent = 'Light Mode';
+            } else {
+                button.textContent = 'Dark Mode';
+            }
+        }
+    </script>
 </body>
 </html>
