@@ -31,10 +31,18 @@
         }
         
         header h1 .logo {
-            height: 2rem; /* Matches font size */
+            height: 2rem;
             width: auto;
-            margin-right: 0.5rem; /* Adds spacing between the logo and text */
+            margin-right: 0.5rem;
             vertical-align: middle;
+            background: none; /* Removes any background */
+            object-fit: contain; /* Ensures the image scales properly */
+            mask-image: url('https://github.com/dangkei4/bandWiki/blob/main/bunnyCarrot.png?raw=true'); /* Masks the image to its shape */
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            -webkit-mask-image: url('https://github.com/dangkei4/bandWiki/blob/main/bunnyCarrot.png?raw=true'); /* For Safari */
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
         }
         nav {
             margin-top: 0.5rem;
