@@ -169,7 +169,23 @@
             padding: 0.5rem;
             text-align: left;
             word-wrap: break-word;  /* Ensure long words break and don't overflow */
-        }        
+        }    
+        /* Specific style for centering the first table */
+        .table-container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;  /* Optional: Add padding around the table */
+        }
+
+        table:first-of-type {
+            table-layout: auto;  /* Allows the table to shrink or expand based on content */
+            width: auto;  /* Ensures the table adjusts to content width */
+            max-width: 100%;  /* Prevents overflow on smaller screens */
+        }
+        #band-image {
+            width: 80%;  /* Adjust this percentage to make the image smaller */
+            height: auto;  /* Maintain the aspect ratio */
+        }
     </style>
 </head>
 <body>
@@ -182,7 +198,7 @@
         <button class="toggle-button" onclick="toggleTheme()">Dark Mode</button>
     </header>
     <main>
-        <img src="https://cdn.pixabay.com/photo/2016/06/22/17/44/easter-1473615_1280.jpg" alt="밴드 이미지">
+        <img src="https://cdn.pixabay.com/photo/2016/06/22/17/44/easter-1473615_1280.jpg" alt="밴드 이미지" id="band-image">
         <div class="table-container">
             <table>
                 <tr>
@@ -213,7 +229,7 @@
             </table>
         </div>
         <section>
-            <h2>개요</h2>
+            <h2>목차</h2>
             <ol>
                 <li><a href="#intro">1.0 밴드 소개</a></li>
                 <ol>
