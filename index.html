@@ -32,11 +32,13 @@
         }
         
         header h1 .logo {
-            height: 2rem;
-            width: auto;
+            display: block; /* Ensures the image is block-level to remove any inline spacing */
+            height: 2rem; /* Or your desired height */
+            width: auto;  /* Keep the width auto to maintain aspect ratio */
             margin-right: 0.5rem;
             vertical-align: middle;
-            background: none; /* Removes any background */
+            background: none; /* Ensures no background */
+            padding: 0; /* Removes any padding */
         }
         nav {
             margin-top: 0.5rem;
@@ -152,7 +154,7 @@
 <body>
     <header>
         <h1>
-            <img src="https://github.com/dangkei4/bandWiki/blob/main/bunnyCarrot.png?raw=true" 
+            <img src="https://github.com/dangkei4/bandWiki/blob/main/miscelPics/bunnyCarrotRemovedBackground.png?raw=true" 
                  alt="Carrot Logo" class="logo">
             당근위키
         </h1>
