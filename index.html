@@ -21,8 +21,16 @@
             position: relative;
         }
         header h1 {
-            margin: 0;
+            display: flex;
+            align-items: center;
             font-size: 2rem;
+        }
+        
+        header h1 .logo {
+            height: 2rem; /* Matches font size */
+            width: auto;
+            margin-right: 0.5rem; /* Adds spacing between the logo and text */
+            vertical-align: middle;
         }
         nav {
             margin-top: 0.5rem;
@@ -123,7 +131,12 @@
 </head>
 <body>
     <header>
-        <h1>당근위키</h1>
+        <h1>
+            <img src="https://static.vecteezy.com/system/resources/previews/004/541/381/non_2x/cute-kawaii-carrot-character-flat-cartoon-illustration-icon-logo-sticker-isolated-on-white-background-vector.jpg" 
+                 alt="당근위키 로고" 
+                 class="logo">
+            당근위키
+        </h1>
         <button class="toggle-button" onclick="toggleTheme()">Dark Mode</button>
     </header>
     <main>
