@@ -195,6 +195,17 @@
         #references li {
             margin-bottom: 1.5rem; /* Adjust the value as needed for the desired spacing */
         }
+        /* This is for the 1.2 section table (targeted by 'equal-width-table') */
+        #exmembers .equal-width-table {
+            width: 100%;           /* Ensure the table spans full width */
+            table-layout: fixed;   /* Set fixed layout for equal column widths */
+        }
+
+        #exmembers .equal-width-table th,
+        #exmembers .equal-width-table td {
+            width: 25%;            /* Set equal width for all columns (4 columns, so 100% / 4 = 25%) */
+            text-align: center;    /* Optional: Center-align text */
+        }        
     </style>
 </head>
 <body>
@@ -347,11 +358,11 @@
         <section id="exmembers">
             <h2>1.2 전 멤버</h2>
             <div class="table-container">
-                <table>
+                <table class="equal-width-table">
                     <tr>
                         <th></th>
                         <th><img src="https://github.com/dangkei4/bandWiki/blob/main/profilePics/young.jpg?raw=true" alt="영지" width="100"></th>
-                        <th><img src="https://github.com/dangkei4/bandWiki/blob/main/profilePics/jake.jpg?raw=true" alt="제읍읍" width="100"></th>
+                        <th><img src="https://github.com/dangkei4/bandWiki/blob/main/profilePics/crossout.jpg?raw=true" alt="제읍읍" width="100"></th>
                         <th><img src="https://github.com/dangkei4/bandWiki/blob/main/profilePics/pearl.jpg?raw=true" alt="진주" width="100"></th>
                     </tr>
                     <tr>
@@ -428,6 +439,10 @@
             <h2>4.0 논란</h2>
             <h3>영지 탈퇴 사건</h3>
             <p>2024년 12월 무렵 영지는 갑작스레 밴드 탈퇴를 선언한다. 근래 들어서 개인적으로 불운한 사건들이 많이 터져서 복합적인 상황 때문에 캐나다 생활에 현타가 왔다고 한다. 이후 도영은 새로운 여자 보컬을 구인하기로 결심하고 오디션을 열기로 한다. 돌아오는 합주날에 새로운 여자 보컬이 참관 및 오디션을 진행하였다. 오디션이 끝나고 영지는 멤버들에게 거듭 사죄를 하고 탈퇴를 번복하고 다시 함께 하게 해주기를 부탁한다. 감정적인 한순간의 실수였던듯. 멤버들의 동의와 함께 영지를 다시 밴드에 합류시킨다. 도영은 사장님으로서 앞으로 그런 일이 있으면 의논을 할것을 당부했다.</p>
+            <h3>제읍읍 태업 논란 후 탈주</h3>
+            <p>미친놈에 대한 논란</p>
+            <h3>영지 2차 탈주 사건</h3>
+            <p>영또탈</p>    
         </section>
         <section id="references">
             <h2>5.0 출처</h2>
