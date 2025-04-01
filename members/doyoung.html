@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>도영 - 당근위키</title> <!-- Change name accordingly -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        header {
+            background-color: #2a4b7c;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header.dark-mode {
+            background-color: #1e2a47;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        nav a {
+            color: #a8c6e6;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        main.dark-mode {
+            background-color: #333;
+            color: #f1f1f1;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        table.dark-mode th, table.dark-mode td {
+            background-color: #444;
+            color: #f1f1f1;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.7rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        th.dark-mode {
+            background-color: #333;
+            color: #f1f1f1;
+        }
+
+        img.profile-pic {
+            display: block;
+            margin: 1rem auto;
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 2px solid #333;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #2a4b7c;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #2a4b7c;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer.dark-mode {
+            background-color: #1e2a47;
+        }
+
+        footer a {
+            color: #a8c6e6;
+            text-decoration: none;
+        }
+
+        .dark-mode-toggle {
+            background-color: #2a4b7c;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #1e3a58;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <header>
+        <h1>당근위키</h1>
+        <nav>
+            <a href="../index.html">위키홈</a>
+        </nav>
+        <!-- Dark Mode Button -->
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    </header>
+
+    <main>
+        <h2>도영</h2> <!-- Change name accordingly -->
+        <img src="https://github.com/dangkei4/bandWiki/blob/main/profilePics/do.jpg?raw=true" alt="도영 프로필 사진" class="profile-pic">
+        
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>이름</th>
+                    <td>도영</td>
+                </tr>
+                <tr>
+                    <th>역할</th>
+                    <td>드러머 (리더)</td>
+                </tr>
+                <tr>
+                    <th>생년월일</th>
+                    <td>1995년생</td>
+                </tr>
+                <tr>
+                    <th>국적</th>
+                    <td>캐네디언</td>
+                </tr>                
+                <tr>
+                    <th>데뷔일</th>
+                    <td>비공식적으로 2024년 중순 추정. 공식적으로는 2024-10-27</td>
+                </tr>
+                <tr>
+                    <th>직업</th>
+                    <td>보험 계리사</td>
+                </tr>
+                <tr>
+                    <th>MBTI</th>
+                    <td>INTP</td>
+                </tr>
+                <tr>
+                    <th>좋아하는 아티스트</th>
+                    <td>대중음악</td>
+                </tr>
+                <tr>
+                    <th>전투력</th>
+                    <td>주짓수 2주</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>소개</h2>
+        <p>도영은 당근케이크 밴드의 창립자이자 드러머이다 (<span style="text-decoration: line-through; color: grey;">컨텐츠 기획자</span>). 밴드 운영 및 리더 역할을 맡고 있으며, 보험 계리사로 일하는 중이다.</p>
+
+        <h2>기타 정보</h2>
+        <ul>
+            <li>밴드 사장님으로서 주요 결정을 담당한다.</li>
+            <li>주짓수 2주 경험 보유.</li>
+            <li>롤 최고 티어 마스터, 현재 다이아.</li>
+        </ul>
+
+        <a href="../index.html" class="back-link">← Back to Main Page</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 당근위키 | <a href="#top">맨위로</a></p>
+    </footer>
+
+    <script>
+        // Toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelector('main').classList.toggle('dark-mode');
+            document.querySelector('table').classList.toggle('dark-mode');
+            document.querySelector('footer').classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+</html>
